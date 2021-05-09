@@ -2,9 +2,9 @@
 
 ## Overview
 
-This project entails writing and executing Python code in Jupyter Notebook, using SQLAlchemy to connect to and query a SQLite database, plotting data in the form of histograms and bar plots using Matplotlib plotting library, and analyzing descriptive statistics that summarize the central tendency, dispersion, and shape of a dataset's distribution. SQLite is a widely used database engine, and SQLAlchemy is a tool designed to query SQLite databases. 
+This project entails writing and executing Python code in Jupyter Notebook, using SQLAlchemy to connect to and query a SQLite database, plotting data in the form of histograms and bar plots using Matplotlib plotting library, and analyzing descriptive statistics that summarize the central tendency, dispersion, and shape of a dataset's distribution. SQLite is a widely used, self-contained database engine, and SQLAlchemy is a tool designed to query SQLite databases. 
 
-In this hypothetical scenario, I have pitched a new business idea for a surf & ice cream shop on the Hawaiian island of O‘ahu. After presenting my business plan, a potential investor expressed concerns about the potential impact of local weather on customer foot traffic and sales. In order to secure investor backing, I first needed to run some analytics on a weather dataset to analyze temperature and precipitation from a variety of local weather stations. 
+In this hypothetical scenario, I have pitched a new business idea for a surf & ice cream shop on the Hawaiian island of O‘ahu. After presenting my business plan, a potential investor expressed concerns about the potential impact of local weather on customer foot traffic and sales. In order to secure investor backing, I first needed to run some analytics on a weather dataset to analyze temperature and precipitation from a variety of local weather stations to assuage those concerns.
 
 ## Results
 Temperature at the proposed store location is close to perfect year-round. 
@@ -27,7 +27,7 @@ As seen in the below histogram, temperature is perfect for surfing and milkshake
 To further analyze the data for the impact of weather on foot traffic, I would look into precipitation data, as rain is the weather type for this region that is most likely to impact sales.
 
 ```
-#Perform a query to retrieve the data and precipitation scores
+#Perform a query to retrieve the dates and precipitation scores
 results = session.query(Measurement.date, Measurement.prcp).filter(Measurement.date >= prev_year).all()
 
 #Save the query results as a Pandas DataFrame and set the index to the date column
